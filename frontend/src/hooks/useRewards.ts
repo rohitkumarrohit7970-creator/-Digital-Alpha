@@ -10,7 +10,7 @@ export interface Reward {
   active: boolean
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || ""
+const API_URL = process.env.NODE_ENV === "production" ? "" : (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8081")
 
 async function fetchRewards(): Promise<Reward[]> {
   const res = await fetch(`${API_URL}/api/rewards`)
