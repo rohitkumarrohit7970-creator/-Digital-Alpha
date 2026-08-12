@@ -2,8 +2,8 @@ import { useQuery } from "@tanstack/react-query"
 import { Transaction, PaginatedResponse } from "@/types"
 
 export interface TransactionFilters {
-  page: int
-  page_size: int
+  page: number
+  page_size: number
   search?: string
   category?: string
   status?: string

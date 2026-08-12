@@ -13,7 +13,7 @@ const COLORS = [
   "#8884d8", "#82ca9d", "#ffc658", "#ff8042", "#a4de6c"
 ]
 
-const CustomTooltip = ({ active, payload }: TooltipProps<number, string>) => {
+const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload
     return (
@@ -64,7 +64,7 @@ export function CategoryChart({ onCategoryClick, activeCategory }: CategoryChart
           paddingAngle={2}
           dataKey="total_amount"
           nameKey="category"
-          onClick={(data) => {
+          onClick={(data: any) => {
             if (data && data.category) {
               onCategoryClick(data.category === "Uncategorized" ? "" : data.category)
             }

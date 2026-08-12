@@ -5,7 +5,7 @@ import { useMonthlyAnalytics } from "@/hooks/useAnalytics"
 import { Area, AreaChart, ResponsiveContainer, Tooltip, TooltipProps, XAxis, YAxis } from "recharts"
 import { format, parseISO } from "date-fns"
 
-const CustomTooltip = ({ active, payload, label }: TooltipProps<number, string>) => {
+const CustomTooltip = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
     return (
       <div className="bg-background border shadow-md rounded-lg p-3 text-sm">
