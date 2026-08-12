@@ -4,11 +4,11 @@ import math
 from datetime import datetime, timezone
 import dateutil.parser
 from sqlalchemy.orm import Session
-from app.db.database import SessionLocal, engine, Base
+from app.db.database import SessionLocal, engine, schema_engine, Base
 from app.models import User, Transaction, Reward
 
 # Initialize DB tables
-Base.metadata.create_all(bind=engine)
+Base.metadata.create_all(bind=schema_engine)
 
 def normalize_timestamp(ts):
     """

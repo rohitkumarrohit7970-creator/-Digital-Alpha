@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api import health
-from app.db.database import Base, engine
+from app.db.database import Base, engine, schema_engine
 import app.models
 
 # Create tables if they don't exist
 try:
-    Base.metadata.create_all(bind=engine)
+    Base.metadata.create_all(bind=schema_engine)
 except Exception as e:
     print(f"Warning: Could not create tables. Database might not exist. Error: {e}")
 

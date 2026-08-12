@@ -19,7 +19,7 @@ export interface CategoryAnalytics {
   transaction_count: number
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8081"
+const API_URL = process.env.NEXT_PUBLIC_API_URL || ""
 
 async function fetchSummary(): Promise<DashboardSummary> {
   const res = await fetch(`${API_URL}/api/analytics/summary`)
