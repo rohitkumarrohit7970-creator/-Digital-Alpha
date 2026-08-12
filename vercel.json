@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://digital-alpha-backend.onrender.com/api/:path*"
+      "destination": "https://digital-alpha-6ssk.onrender.com/api/:path*"
     }
   ]
 }
